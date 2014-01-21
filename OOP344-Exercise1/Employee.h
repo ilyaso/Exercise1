@@ -9,7 +9,7 @@ class Employee
       int hours;
    protected:
    public:
-      Employee(int id, char* name);
+      Employee(int id, char* n);
       ~Employee();
       void setBoss(Manager* newBoss);
       void work(int numOfHours);

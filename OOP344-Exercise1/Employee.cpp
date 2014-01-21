@@ -3,11 +3,11 @@
 #include <iostream>
 #include "Manager.h"
 
-Employee::Employee(int id, char* name)
+Employee::Employee(int id, char* n)
    {
    ID = id;
-   Employee::name = new char[strlen(name)];
-   strcpy(Employee::name, name);
+   name = new char[strlen(n) + 1];// properly setup name allocation
+   strcpy(name, n);
    boss = 0;
    hours = 0;
    }
@@ -47,3 +47,8 @@ int Employee::getID()
    {
    return ID;
    }
+
+// added the getName function
+char* Employee::getName(){
+    return name;
+}
